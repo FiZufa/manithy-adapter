@@ -1,0 +1,16 @@
+{
+  "user_message": "I want a refund for order ORD-9912",
+  "retrieved_docs": [
+    { "order_id": "ORD-9912", "status": "DELIVERED" }
+  ],
+  "session": {
+    "session_id": "abc123",
+    "auth_token": "jwt-xyz",
+    "device": "mobile",
+    "channel": "chat"
+  },
+  "metadata": {
+    "tenant": "shopA",
+    "user_id": "USER-778"
+  }
+}
