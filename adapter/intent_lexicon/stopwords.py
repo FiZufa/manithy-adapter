@@ -1,4 +1,6 @@
-STOPWORDS = [
+import os
+
+MANUAL_STOPWORDS = [
 
     # Articles
     "a", "an", "the",
@@ -58,3 +60,27 @@ STOPWORDS = [
     "something", "anything",
     "everything", "nothing"
 ]
+
+PROTECTED_WORDS = {"not", "no", "never"}
+
+
+def _load_external_stopwords():
+    base_dir = os.path.dirname(__file__)
+    file_path = os.path.join(base_dir, "EN-Stopwords.txt")
+
+    external_stopwords = set()
+
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            for line in f:
+                word = line.strip().lower()
+                if word:
+                    external_stopwords.add(word)
+
+    return external_stopwords
+
+# Merge everything
+STOPWORDS = (
+    MANUAL_STOPWORDS
+    | _load_external_stopwords()
+) - PROTECTED_WORDS
