@@ -54,6 +54,8 @@ ACTION_CLASS_WORDS = {
         "how to exchange",
         "exchange process",
         "exchange policy",
+        "I want to exchange",
+        "Can I exchange",
         "exchage"  # typo
     ],
 
@@ -80,6 +82,7 @@ ACTION_CLASS_WORDS = {
         "return approval",
         "return policy",
         "want to send it back",
+        "I want to return",
         "I want to return this",
         "can I return this",
         "return window",
@@ -101,7 +104,14 @@ ACTION_CLASS_WORDS = {
         "when will it arrive",
         "estimated delivery",
         "still not received",
-        "not delivered yet"
+        "not delivered yet",
+        "order update",
+        "order tracking",
+        "track my order",
+        "track my package",
+        "shipment status",
+        "shipping update",
+        "delivery update",
     ],
 
     "cancel_order": [
